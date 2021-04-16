@@ -40,10 +40,10 @@ const Person = (props) => {
                                 <strong>Name: </strong>{name}
                                 </li>
                                 <li className="list-group-item">
-                                <strong>Height: </strong>{height}
+                                <strong>Height: </strong>{height} cm
                                 </li>
                                 <li className="list-group-item">
-                                <strong>Mass: </strong>{mass}
+                                <strong>Mass: </strong>{mass} kg
                                 </li>
                                 <li className="list-group-item">
                                 <strong>Gender: </strong>{gender}
