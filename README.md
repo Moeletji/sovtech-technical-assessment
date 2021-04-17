@@ -1,2 +1,2 @@
 # sovtech-technical-assessment
-A Technical assessment for Software Engineer role.
+A technical assessment for Software Engineer role.
