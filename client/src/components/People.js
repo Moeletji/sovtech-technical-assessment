@@ -72,9 +72,11 @@ const People = () => {
                 )
             }
             
-            <input type="number" onChange={(event) => {
-                setPage(parseInt(event.target.value));
-            }}/>    
+            <div>
+                <strong>Select page number: </strong><input type="number" onChange={(event) => {
+                    setPage(parseInt(event.target.value));
+                }}/>
+            </div>    
         </>
     )
 };
