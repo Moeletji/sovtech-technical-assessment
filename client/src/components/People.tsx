@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { gql } from '@apollo/client';
 import { Query } from 'react-apollo';
 import PeopleItem from './PeopleItem';
+import IPerson from '../model/Person';
 
 const PEOPLE_QUERY = gql`
     query PeopleQuery {
@@ -27,7 +28,7 @@ const PEOPLEPAGE_QUERY = gql`
     }
 `;
 
-const People = () => {
+const People: React.FC = () => {
 
     const [page, setPage] = useState(1);
 
@@ -38,13 +39,13 @@ const People = () => {
                 page > 1 ? (
                     <Query query={PEOPLEPAGE_QUERY}  variables={{page}} >
                         {
-                            ({loading, error, data}) => {
-                                if (loading) return <h4>Loading...</h4>;
-                                if (error) console.log(error);
-                                console.log(data);
+                            (info: any) => {
+                                if (info.loading) return <h4>Loading...</h4>;
+                                if (info?.error) console.log(info?.error);
+
                                 return <>
                                     {
-                                        data.peoplePage.map(person => (
+                                        info.data.peoplePage.map((person: IPerson) => (
                                             <PeopleItem key={person.name} person={person} />
                                         ))
                                     }
@@ -55,13 +56,13 @@ const People = () => {
                 ) : (
                     <Query query={PEOPLE_QUERY}>
                         {
-                            ({loading, error, data}) => {
-                                if (loading) return <h4>Loading...</h4>;
-                                if (error) console.log(error);
+                            (info: any) => {
+                                if (info.loading) return <h4>Loading...</h4>;
+                                if (info?.error) console.log(info?.error);
 
                                 return <>
                                     {
-                                        data.people.map(person => (
+                                        info.data.people.map((person: IPerson) => (
                                             <PeopleItem key={person.name} person={person} />
                                         ))
                                     }

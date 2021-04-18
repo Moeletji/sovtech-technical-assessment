@@ -15,22 +15,22 @@ const PERSON_QUERY = gql`
     }
 `;
 
-const Person = (props) => {
+const Person: React.FC = (props: any) => {
     const name = props.match.params.name;
     return (
         <>
             <Query query={PERSON_QUERY} variables={{name}}>
                 {
-                    ({ loading, error, data}) => {
-                        if (loading) return <h4>Loading...</h4>;
-                        if (error) console.log(error);
+                    (info: any) => {
+                        if (info.loading) return <h4>Loading...</h4>;
+                        if (info?.error) console.log(info?.error);
 
                         const { name, 
                             height,
                             mass,
                             gender,
                             homeworld
-                        } = data.person[0]
+                        } = info.data.person[0]
                         
                         return <div>
                             <h1 className="display-4 my-3"><span className="text-dark">Person: </span>{name}</h1>
