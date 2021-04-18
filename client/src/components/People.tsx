@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { gql } from '@apollo/client';
 import { Query } from 'react-apollo';
 import PeopleItem from './PeopleItem';
