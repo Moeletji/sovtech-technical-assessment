@@ -17,7 +17,7 @@ const PEOPLE_QUERY = gql`
 `;
 
 const PEOPLEPAGE_QUERY = gql`
-    query PeoplePageQuery($page: Int) {
+    query PeoplePageQuery($page: Int!) {
         peoplePage(page: $page) {
             name
             mass
