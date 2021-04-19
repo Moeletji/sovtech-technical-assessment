@@ -1,5 +1,5 @@
 # sovtech-technical-assessment
-A technical assessment for Software Engineer role.
+A technical assessment for Software Engineer role hosted on Heroku.
 
 ## Quick Start
 ### Install dependencies (server & client)
