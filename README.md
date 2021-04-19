@@ -1,6 +1,22 @@
 # sovtech-technical-assessment
 A technical assessment for Software Engineer role hosted on Heroku.
 
+# Tools(including npm packages) used
+
+## Client
+* TypeScript
+* React
+* Apollo Client
+* React Router
+
+## Server
+* Axios
+* Concurrently
+* CORS
+* Express
+* GraphQL
+* Node
+
 ## Quick Start
 ### Install dependencies (server & client)
 npm install
