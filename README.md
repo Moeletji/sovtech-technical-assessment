@@ -1,5 +1,5 @@
-# sovtech-technical-assessment
-A technical assessment for Software Engineer role hosted on Heroku.
+# star-wars-api-react-app
+Star wars API React app for displaying all the characters
 
 # Tools(including npm packages) used
 
